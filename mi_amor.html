@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Especial</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #ffc0cb; /* Rosado pastel */
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        h1 {
+            font-family: "Times New Roman", serif;
+            font-size: 2.5em; /* Ajustado a 2.5em */
+            margin: 0.5em 0;
+        }
+        p {
+            font-size: 1.5em;
+        }
+        .final-text {
+            font-family: "Times New Roman", serif;
+            font-size: 20px;
+            text-align: justify;
+            margin: 20px;
+            color: #fff;
+        }
+        .small-text {
+            position: absolute;
+            left: 10px;
+            bottom: 10px;
+            font-size: 0.8em;
+            color: #fff;
+        }
+        img {
+            max-width: 80%;
+            height: auto;
+            margin: 20px 0;
+        }
+        .small-text-below {
+            font-size: 1.2em;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>¿Sabías que...?</h1>
+    <p class="small-text">Presiona <strong>F1</strong> para continuar...</p>
+
+    <script>
+        window.onload = function() {
+            window.addEventListener('keydown', function(event) {
+                if (event.key === 'F1') {
+                    event.preventDefault(); // Evita que se abra la ayuda del navegador
+                    document.body.innerHTML = `<p class='final-text'>Observe el reflejo de mis ojos a través de mi pantalla al recibir tus mensajes, y en ellos vi todo el amor que creí no sentir, gracias a ti he disfrutado más mis días, porque tu estúpida forma de ser siempre me saca una sonrisa... No sé cómo lograste meterte en mi cabeza y hacerme saltar de la emoción al recordar tus ojitos, tu sonrisa, tus besos... No sé cómo lograste que amará más el negro de mis ojos al sorprenderme pensando en ti, tampoco sé cómo lograste que mis pies se muevan automáticamente al recostarme y estar hablando contigo. Lograste que le sonría al teléfono como estúpida al recibir tu mensaje. Y logras ponerme nerviosa cada que te tengo cerca! Has logrado fijar mi atención a ti, y sinceramente no sé cómo lo hiciste, tampoco me importa saber como lo has hecho, simplemente sigue haciéndolo, sigue siendo un caballero, sigue escuchándome, consintiéndome, abrazándome, sigue amándome y queriéndome, no sabes cuánto aprecio cada detalle.</p>
+                    <p class="small-text">Presiona <strong>F2</strong> para continuar...</p>`;
+
+                    window.addEventListener('keydown', function(event) {
+                        if (event.key === 'F2') {
+                            event.preventDefault();
+                            document.body.innerHTML = `<h1>Perdón por decirte "te quiero"</h1>
+                            <p class="final-text">Agradezco a Dios por permitirte que me encontraras jajaja... siempre humilde. Mi artista favorito soy yo al crear pensando en ti, me llenas de inspiración, de frustración y de amor. No sabes cuánto te quiero, no... créeme que no lo sabes, nunca estuvo dentro de mis planes el llegar a quererte tanto, pero se siente como una recompensa, y la verdad, me lo merezco. No voy con esas cursilerías de quererte hasta la muerte, te querré hasta que dure, y ojalá que dure para siempre.</p>
+                            <p class="small-text">Presiona <strong>F3</strong> para continuar...</p>`;
+
+                            window.addEventListener('keydown', function(event) {
+                                if (event.key === 'F3') {
+                                    event.preventDefault();
+                                    document.body.innerHTML = `<h1>“Amar es saber que no te cambia el tiempo…”</h1>
+                                    <p class='final-text'>“Amar es saber que no te cambia el tiempo, ni las tempestades, ni mis inviernos...”</p>
+                                    <p class='final-text' style='text-align: right;'>- El Principito</p>
+                                    <p class="small-text">Presiona <strong>F4</strong> para continuar...</p>`;
+                                }
+                            });
+                        }
+                    });
+                }
+
+                // Nueva página con F4 (solo "Presiona F5 para continuar")
+                if (event.key === 'F4') {
+                    event.preventDefault();
+                    document.body.innerHTML = `<p class="large-text">Presiona <strong>F5</strong> para continuar...</p>`;
+                }
+
+                // Nueva página con F5 (con el texto "Por el culo te la hinco XD")
+                if (event.key === 'F5') {
+                    event.preventDefault();
+                    document.body.innerHTML = `<h1 style="font-family: 'Times New Roman', serif; font-size: 3.5em;">Por el culo te la hinco XD</h1>
+                    <p class="small-text-below">(Feliz primer mes mi amor ❤️)</p>
+                    <p class="small-text">Presiona <strong>F6</strong> para continuar...</p>`;
+                }
+
+                // Última página con la imagen
+                if (event.key === 'F6') {
+                    event.preventDefault();
+                    document.body.innerHTML = `<h1 style="font-family: 'Times New Roman', serif; font-size: 2.5em;">Yo no elegí ser la mejor novia del mundo</h1>
+                    <img src="https://i.pinimg.com/1200x/83/41/e5/8341e5fa88ab9b661fb2282b9916ff68.jpg" alt="Imagen especial">
+                    <p class="final-text" style="font-family: 'Times New Roman', serif; font-size: 2.5em;">Simplemente Dios te ama.</p>`;
+                }
+            });
+        };
+    </script>
+</body>
+</html>
